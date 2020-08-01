@@ -1,0 +1,57 @@
+﻿﻿<div class="register">
+    <legend><h3>Register</h3></legend>
+    <div class="register-body">
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="firstName">First Name *</label>
+        <input type="text" formControlName="firstName" name="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name *</label>
+        <input type="text" formControlName="lastName" name="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="username">Date of Birth *</label>
+        <input type="date" formControlName="dob" name="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" />
+        <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+            <div *ngIf="f.dob.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" name="email" class="form-control" />
+      
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number *</label>
+        <input type="text" formControlName="phoneNumber" name="phoneNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+        <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" formControlName="country" name="country" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="occupation">Profession</label>
+        <input type="text" formControlName="occupation" name="occupation" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="registerBtn">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <button routerLink="/login">Sign In</button>
+    </div>
+</form>
+    </div>
+</div>
+

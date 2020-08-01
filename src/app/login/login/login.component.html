@@ -1,0 +1,20 @@
+<div class="login">
+    <legend><h3>Sign In</h3></legend>
+    <div class="login-body">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="username">Mobile number</label>
+        <input type="text" formControlName="username"name="username"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <button [disabled]="loading">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <button routerLink="/register" >Sign Up</button>
+    </div>
+</form>

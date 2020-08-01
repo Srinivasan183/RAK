@@ -1,3 +1,6 @@
+$left-color:  #242e4d;
+$right-color: #897e79;
+
 body {
     font-family: Verdana;
     margin: auto;
@@ -5,7 +8,11 @@ body {
     float: left;
     //width: 100%;
     height: 100vh;
-    background-color: hsl(0, 11%, 93%);
+    background: linear-gradient(
+        135deg,
+        rgba($left-color, .9),
+        rgba($right-color, .9)
+      );
     background-position: center;
     background-size: cover;
     overflow-x: hidden;

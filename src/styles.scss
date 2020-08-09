@@ -22,24 +22,6 @@
     padding-top: 10px;
   }
   
-  input{    
-    display: block;
-    width: 50%;
-    margin: auto;
-    padding: 13px;
-    border: 0;
-    border-radius: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    opacity: 1.15;
-    float: right;
-  }
-  
-  input:focus{
-    border:1px solid rgba(255,109,46,0.6);
-    box-shadow: 0 0 3px rgba(255,109,46,0.6);
-    outline: none;
-    font-size: 1.1em;
-  }
 
 button {
     margin-left: 20%;

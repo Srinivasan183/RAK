@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { stringify } from 'querystring';
+import { UserModel } from '../models/user';
 
 @Component({
   selector: 'app-register-user',
@@ -12,6 +13,8 @@ import { stringify } from 'querystring';
 export class RegisterUserComponent implements OnInit {
 
   registerForm: FormGroup;
+  user: UserModel;
+  users: UserModel[];
   loading = false;
   submitted = false;
 
@@ -50,6 +53,10 @@ export class RegisterUserComponent implements OnInit {
       }
 
       this.loading = true;
+    
+    }
+
+    save(user: UserModel) {
     
     }
 }

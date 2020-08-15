@@ -57,6 +57,6 @@ export class RegisterUserComponent implements OnInit {
     }
 
     save(user: UserModel) {
-    
+        
     }
 }
